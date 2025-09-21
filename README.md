@@ -46,6 +46,6 @@ Power values are target budgets (Cloud50W, Edge2W, MCU~10mW), not measurements.
 - NAS 量化三版本指标（尺寸/延迟/精度）：`edge_quant_results_legacy.json`。
 - NAS 代理搜索候选：`nas_search_results.json`。 
 - 最终 depthwise 训练记录：`train_depthwise_selected.json`。
-- 你项目对 P2/P3 的结构总结（并行路线的说明）：`p23介绍.md`。
+- 项目对 P2/P3 的结构总结（并行路线的说明）：`p23介绍.md`。
 
 ---
