@@ -1,0 +1,59 @@
+{
+  "config": {
+    "epochs_proxy": 3,
+    "batch": 32,
+    "width_space": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "depth_space": [
+      1.0,
+      1.5
+    ]
+  },
+  "candidates": [
+    {
+      "width_mult": 0.5,
+      "depth_mult": 1.0,
+      "epochs_proxy": 3,
+      "eval_acc": 0.47999998927116394,
+      "params": 18209
+    },
+    {
+      "width_mult": 0.5,
+      "depth_mult": 1.5,
+      "epochs_proxy": 3,
+      "eval_acc": 0.5049999952316284,
+      "params": 25489
+    },
+    {
+      "width_mult": 0.75,
+      "depth_mult": 1.0,
+      "epochs_proxy": 3,
+      "eval_acc": 0.5609999895095825,
+      "params": 37849
+    },
+    {
+      "width_mult": 0.75,
+      "depth_mult": 1.5,
+      "epochs_proxy": 3,
+      "eval_acc": 0.5260000228881836,
+      "params": 52801
+    },
+    {
+      "width_mult": 1.0,
+      "depth_mult": 1.0,
+      "epochs_proxy": 3,
+      "eval_acc": 0.45899999141693115,
+      "params": 64529
+    },
+    {
+      "width_mult": 1.0,
+      "depth_mult": 1.5,
+      "epochs_proxy": 3,
+      "eval_acc": 0.5659999847412109,
+      "params": 89841
+    }
+  ]
+}

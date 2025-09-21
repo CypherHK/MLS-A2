@@ -1,0 +1,131 @@
+{
+  "optimization_results": {
+    "cloud_server": {
+      "model_path": "cloud_optimized_models/mp_cnn_ep15.keras",
+      "accuracy": 0.7706,
+      "model_size_mb": 6.602265,
+      "estimated_latency_ms": 27.80764332972467,
+      "memory_usage_mb": 13.216818,
+      "optimization_strategy": "cloud:mp_cnn_ep15.keras"
+    },
+    "edge_device": {
+      "model_path": "edge_optimized_models/depthwise_w0_75_d1_0_drq.tflite",
+      "accuracy": 0.625,
+      "model_size_mb": 0.059056,
+      "estimated_latency_ms": 0.10818354494404048,
+      "memory_usage_mb": 1.059056,
+      "optimization_strategy": "tflite:drq"
+    },
+    "microcontroller": {
+      "model_path": "edge_optimized_models/depthwise_w0_75_d1_0_int8.tflite",
+      "accuracy": 0.615,
+      "model_size_mb": 0.062144,
+      "estimated_latency_ms": 0.0663512502796948,
+      "memory_usage_mb": 1.065226,
+      "optimization_strategy": "tflite:int8_prebuilt"
+    }
+  },
+  "scaling_analysis": {
+    "per_point": [
+      {
+        "target": "cloud_server",
+        "strategy": "cloud:mp_cnn_ep15.keras",
+        "model_path": "cloud_optimized_models/mp_cnn_ep15.keras",
+        "size_mb": 6.602265,
+        "latency_ms": 27.80764332972467,
+        "accuracy": 0.7706
+      },
+      {
+        "target": "edge_device",
+        "strategy": "tflite:drq",
+        "model_path": "edge_optimized_models/depthwise_w0_75_d1_0_drq.tflite",
+        "size_mb": 0.059056,
+        "latency_ms": 0.10818354494404048,
+        "accuracy": 0.625
+      },
+      {
+        "target": "microcontroller",
+        "strategy": "tflite:int8_prebuilt",
+        "model_path": "edge_optimized_models/depthwise_w0_75_d1_0_int8.tflite",
+        "size_mb": 0.062144,
+        "latency_ms": 0.0663512502796948,
+        "accuracy": 0.615
+      },
+      {
+        "target": "edge_device",
+        "strategy": "tflite:fp16",
+        "model_path": "edge_optimized_models/depthwise_w0_75_d1_0_fp16.tflite",
+        "size_mb": 0.084968,
+        "latency_ms": 0.1179877101094462,
+        "accuracy": 0.625
+      }
+    ],
+    "pareto_front_accuracy_vs_size": [
+      {
+        "target": "edge_device",
+        "strategy": "tflite:drq",
+        "model_path": "edge_optimized_models/depthwise_w0_75_d1_0_drq.tflite",
+        "size_mb": 0.059056,
+        "latency_ms": 0.10818354494404048,
+        "accuracy": 0.625
+      },
+      {
+        "target": "cloud_server",
+        "strategy": "cloud:mp_cnn_ep15.keras",
+        "model_path": "cloud_optimized_models/mp_cnn_ep15.keras",
+        "size_mb": 6.602265,
+        "latency_ms": 27.80764332972467,
+        "accuracy": 0.7706
+      }
+    ],
+    "pareto_front_accuracy_vs_latency": [
+      {
+        "target": "microcontroller",
+        "strategy": "tflite:int8_prebuilt",
+        "model_path": "edge_optimized_models/depthwise_w0_75_d1_0_int8.tflite",
+        "size_mb": 0.062144,
+        "latency_ms": 0.0663512502796948,
+        "accuracy": 0.615
+      },
+      {
+        "target": "edge_device",
+        "strategy": "tflite:drq",
+        "model_path": "edge_optimized_models/depthwise_w0_75_d1_0_drq.tflite",
+        "size_mb": 0.059056,
+        "latency_ms": 0.10818354494404048,
+        "accuracy": 0.625
+      },
+      {
+        "target": "cloud_server",
+        "strategy": "cloud:mp_cnn_ep15.keras",
+        "model_path": "cloud_optimized_models/mp_cnn_ep15.keras",
+        "size_mb": 6.602265,
+        "latency_ms": 27.80764332972467,
+        "accuracy": 0.7706
+      }
+    ],
+    "bottlenecks": {
+      "cloud_server": {
+        "size_over_mb": 0.0,
+        "latency_over_ms": 0.0,
+        "memory_over_mb": 0.0
+      },
+      "edge_device": {
+        "size_over_mb": 0.0,
+        "latency_over_ms": 0.0,
+        "memory_over_mb": 0.0
+      },
+      "microcontroller": {
+        "size_over_mb": 0.0,
+        "latency_over_ms": 0.0,
+        "memory_over_mb": 0.0
+      }
+    }
+  },
+  "deployment_recommendations": [
+    "A 实时视频：采用 Edge 实时推理（≤50ms），Cloud 作为回传备份/异步再训练。",
+    "B IoT：采用 Tiny INT8 全整型模型（≤1MB），周期性云同步；若精度不足，增加代表性数据进行再校准。",
+    "C 移动离线：Multi-tier（本地 FP16/INT8 + 断网缓存 + 联网批量上云），从 Pareto 前沿挑本地最优点。",
+    "通用：沿 Pareto 前沿滚动优化，优先解决各 target 的首要瓶颈（size/latency/memory 超约束最大者）。"
+  ]
+}

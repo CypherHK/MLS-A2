@@ -1,0 +1,8 @@
+{
+  "width": 0.75,
+  "depth": 1.0,
+  "epochs": 12,
+  "keras_path": "/Users/wangyucheng/Projects/MLS-A2/edge_optimized_models/depthwise_w0_75_d1_0.keras",
+  "weights_path": "/Users/wangyucheng/Projects/MLS-A2/edge_optimized_models/depthwise_w0_75_d1_0.weights.h5",
+  "test_accuracy": 0.6173999905586243
+}

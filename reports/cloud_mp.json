@@ -1,0 +1,9 @@
+{
+  "mixed_precision": {
+    "epochs": 15,
+    "total_time_s": 411.31,
+    "time_per_epoch_s": 27.42,
+    "test_loss": 0.6690079569816589,
+    "test_accuracy": 0.772599995136261
+  }
+}

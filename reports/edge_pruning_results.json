@@ -1,0 +1,49 @@
+{
+  "config": {
+    "epochs_finetune": 6,
+    "batch": 32,
+    "val_split": 0.1,
+    "test_samples": 1000,
+    "sparsities": [
+      0.5,
+      0.75,
+      0.9
+    ]
+  },
+  "baseline_eval": {
+    "loss": 0.9829649329185486,
+    "accuracy": 0.75
+  },
+  "pruning": [
+    {
+      "target_sparsity": 0.5,
+      "measured_sparsity": 0.48092504225072075,
+      "eval": {
+        "loss": 0.4982709288597107,
+        "accuracy": 0.8410000205039978
+      },
+      "finetune_seconds": 452.9494422500138,
+      "keras_path": "/Users/wangyucheng/Projects/MLS-A2/edge_optimized_models/student_pruned_s0_5.keras"
+    },
+    {
+      "target_sparsity": 0.75,
+      "measured_sparsity": 0.75,
+      "eval": {
+        "loss": 0.5684826374053955,
+        "accuracy": 0.8149999976158142
+      },
+      "finetune_seconds": 470.0914276249823,
+      "keras_path": "/Users/wangyucheng/Projects/MLS-A2/edge_optimized_models/student_pruned_s0_75.keras"
+    },
+    {
+      "target_sparsity": 0.9,
+      "measured_sparsity": 0.8999993786658713,
+      "eval": {
+        "loss": 0.5388051867485046,
+        "accuracy": 0.8109999895095825
+      },
+      "finetune_seconds": 461.21049666701583,
+      "keras_path": "/Users/wangyucheng/Projects/MLS-A2/edge_optimized_models/student_pruned_s0_9.keras"
+    }
+  ]
+}

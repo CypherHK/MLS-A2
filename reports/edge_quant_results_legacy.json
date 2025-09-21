@@ -1,0 +1,26 @@
+{
+  "arch": "depthwise",
+  "width": 0.75,
+  "depth": 1.0,
+  "weights_path": "edge_optimized_models/depthwise_w0_75_d1_0.weights.h5",
+  "tflite": {
+    "drq": {
+      "size_mb": 0.059056,
+      "latency_ms_per_sample": 0.10818354494404048,
+      "accuracy": 0.625,
+      "samples": 200
+    },
+    "fp16": {
+      "size_mb": 0.084968,
+      "latency_ms_per_sample": 0.1179877101094462,
+      "accuracy": 0.625,
+      "samples": 200
+    },
+    "int8": {
+      "size_mb": 0.062144,
+      "latency_ms_per_sample": 0.08342562505276874,
+      "accuracy": 0.605,
+      "samples": 200
+    }
+  }
+}

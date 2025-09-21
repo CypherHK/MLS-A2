@@ -1,0 +1,44 @@
+{
+  "mixed_precision": {
+    "epochs": 15,
+    "total_time_s": 411.31,
+    "time_per_epoch_s": 27.42,
+    "test_loss": 0.6690079569816589,
+    "test_accuracy": 0.772599995136261
+  },
+  "distributed": {
+    "strategy": "MirroredStrategy",
+    "replicas": 1,
+    "epochs": 5,
+    "total_time_s": 232.79,
+    "time_per_epoch_s": 46.56,
+    "test_loss": 1.2218605279922485,
+    "test_accuracy": 0.5748999714851379
+  },
+  "batch_processing": {
+    "config": {
+      "target_batch_size": 1024,
+      "micro_batch_size": 256,
+      "accum_steps": 4
+    },
+    "epochs": 10,
+    "total_time_s": 480.33,
+    "time_per_epoch_s": 48.03,
+    "test_loss": 0.42676660418510437,
+    "test_accuracy": 0.6151000261306763
+  },
+  "knowledge_distillation": {
+    "teacher_params": 870532,
+    "student_params": 323946,
+    "teacher_epochs": 16,
+    "teacher_train_time_s": 1276.58,
+    "teacher_time_per_epoch_s": 79.79,
+    "teacher_accuracy": 0.7307999730110168,
+    "student_epochs": 16,
+    "student_train_time_s": 936.46,
+    "student_time_per_epoch_s": 58.53,
+    "student_accuracy": 0.7031999826431274,
+    "alpha": 0.7,
+    "temperature": 2.0
+  }
+}

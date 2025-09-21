@@ -1,0 +1,9 @@
+# Core ML/AI
+tensorflow-macos
+tensorflow-metal            # optional; speeds up training/inference on Apple GPU
+tensorflow-model-optimization
+# Utilities
+numpy
+pandas
+matplotlib
+scikit-learn

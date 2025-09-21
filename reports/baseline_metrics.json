@@ -1,0 +1,9 @@
+{
+  "test_accuracy": 0.8388000130653381,
+  "test_loss": 0.48859819769859314,
+  "params": 323946,
+  "parameter_memory_mb": 1.2357559204101562,
+  "inference_time_ms": 1.9085300000733696,
+  "history_curve_png": "/Users/wangyucheng/Projects/MLS-A2/charts/baseline_accuracy.png",
+  "model_file_mb": 3.8030805587768555
+}
