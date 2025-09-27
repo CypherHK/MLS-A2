@@ -3,7 +3,7 @@
 ## Envs
 - macOS (Apple Silicon), Python 3.10
 - TensorFlow / TFLite (CPU only for evaluation)
-- Note: Keras3→TFLite 在 M1 需先 `.keras` → `.h5` 再转换
+- Note: Keras3→TFLite need firstly `.keras` → `.h5` then convert.
 
 ## Repo Layout
 - part1_baseline.py — Baseline CNN (train/eval)
@@ -17,6 +17,7 @@
 - reports/ — JSON metrics (cloud, edge, nas, pruning, pipeline)
 - cloud_optimized_models/, edge_optimized_models/ — Saved models & TFLites
 - charts/ — Figures
+- scripts - Demo Materials
 
 ## Quick Start
 1) Prepare models & reports (already provided under `/reports` and model dirs).
@@ -40,13 +41,13 @@ Power values are target budgets (Cloud50W, Edge2W, MCU~10mW), not measurements.
 ---
 
 ### Key Reference
-- P4 报告（最终指标、Pareto、建议）：`multi_scale_optimization_report.json`。
-- 云端各路线真实指标：`cloud_optimization_results.json`。
-- 剪枝与微调记录：`edge_pruning_results.json`。
-- NAS 量化三版本指标（尺寸/延迟/精度）：`edge_quant_results_legacy.json`。
-- NAS 代理搜索候选：`nas_search_results.json`。 
-- 最终 depthwise 训练记录：`train_depthwise_selected.json`。
-- 项目对 P2/P3 的结构总结（并行路线的说明）：`p23介绍.md`。
+- Part 4 Report (Final Indicators, Pareto, Recommendations): ` multi_stcale_optimize_report. json `.
+- Real indicators for each route in the cloud: ` cloud_optimize_results. json `.
+- Pruning and fine-tuning records: ` edge_pruning.results. json `.
+- 3 Metrics in NAS Quantification Version  (Size/Latency/Accuracy): ` edge_quant_desults_legacy. json `.
+- NAS proxy search candidate: ` nas_dearch_desults. json`.  
+- Final depthwise training record: ` train_depthwises_taught. json `.
+- Project summary of P2/P3 structure (explanation of parallel route): `P23intro.md`.
 
 ---
 ## Example inference scripts
