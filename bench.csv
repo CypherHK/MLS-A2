@@ -1,0 +1,3 @@
+keras,cloud_optimized_models/mp_cnn_ep15.keras,6.602265,0.7706,27.299196,13.216818
+tflite,edge_optimized_models/depthwise_w0_75_d1_0_drq.tflite,0.059056,0.6130,0.118652,1.059056
+tflite,edge_optimized_models/depthwise_w0_75_d1_0_int8.tflite,0.062144,0.6150,0.070756,1.062144

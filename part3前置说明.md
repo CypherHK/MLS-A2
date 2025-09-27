@@ -60,7 +60,7 @@ def create_student_architecture():
 但在此之前，请先确认是否清晰了这次项目内容，必要时可以联网确认一些包的版本关系。
 
 运行命令：
-python convert_eval_legacy.py --arch depthwise \
+python part3_convert_eval_legacy.py --arch depthwise \
   --width 0.75 --depth 1.0 \
   --weights edge_optimized_models/depthwise_w0_75_d1_0.weights.h5 \
   --int8
